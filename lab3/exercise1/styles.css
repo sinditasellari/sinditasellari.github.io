@@ -1,0 +1,19 @@
+.content{
+    border: 5px green solid;
+}
+
+.title{
+    border: 5px red solid;
+}
+
+#subheading{
+    border: 5px orange solid;
+}
+
+span{
+    border: 5px purple solid;
+}
+
+.para{
+    border: 5px blue solid;
+}

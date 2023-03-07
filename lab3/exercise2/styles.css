@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url("../background.jpg");
+}
+.content{
+    border: 5px green solid;
+    background-color: white;
+}
+
+.title{
+    border: 5px red solid;
+}
+
+#subheading{
+    border: 5px orange solid;
+}
+
+span{
+    border: 5px purple solid;
+}
+
+.para{
+    border: 5px blue solid;
+    background-color: #E8FBFB;
+    padding: 5px;
+    margin: 10px 0 0;
+}
