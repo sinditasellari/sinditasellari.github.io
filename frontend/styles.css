@@ -791,3 +791,39 @@ input[type='radio']:checked:after {
     outline: none;
 }
 
+@media (max-width: 768px){
+    h1, h2 {
+        font-size: 12px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .hero {
+    min-height: 3vh!important;
+    }
+
+    .location {
+    font-size: 10px;
+    }
+
+    p{
+        font-size:8px!important;
+    }
+
+    #product-card-donator {
+         font-size:10px;
+    }
+
+    .cart-container {
+    width: 80%;
+    }
+
+
+
+
+
+
+
+
+
+}
