@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width" initial-scale=1>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<header>
+	<div class="hero"> 
+		<nav>
+			<img src="images/logo.png" class="logo">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#notification">Notifications</a></li>
+			</ul>
+			<img src="images/user.png" class="user-pic" onclick="toggleMenu()">
+	
+			<div class="sub-menu-wrap" id="subMenu">
+				<div class="sub-menu">
+					<div class="user-info">
+						<a href="profile.html"><img src="images/user.png"></a>
+						<h3> Name Surname</h3>
+					</div> 
+					<hr>
+	
+					<a href="edit_profile.html" class="sub-menu-link">
+						<img src="images/profile.png">
+						<p>Edit Profile</p>
+						<span></span>
+					</a>
+					<a href="#" class="sub-menu-link">
+						<img src="images/received.png">
+						<p>Shopping cart</p>
+						<span></span>
+					</a>
+					<a href="my_basket.html" class="sub-menu-link">
+						<img src="images/groceries.png">
+						<p>My Grocery Basket</p>
+						<span></span>
+					</a>
+					<a href="privacy.html" class="sub-menu-link">
+						<img src="images/settings.png">
+						<p>Settings & Privacy</p>
+						<span></span>
+					</a>
+					<a href="source.html" class="sub-menu-link">
+						<img src="images/logout.png">
+						<p>Log out</p>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+<body>
+<div class="shopping">
+   <div class="cart-container">
+   	   <div class="header">
+		<h3 class="heading">Shopping Cart</h3>
+   	   	<h5 class="action">Remove all</h5>
+   	   </div>
+
+   	   <div class="cart-items">
+   	   	  <div class="image-box">
+   	   	  	<img src="images/apple.png" />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h2 class="title">Apples</h2>
+   	   	  	<h3 class="subtitle">Location: address 1</h3>
+   	   	  	<img src="images/available.png" height="30px"/>
+   	   	  </div>
+   	   	  <div class="notify">
+   	   	  	<div class="send">Send notification to the donater</div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+
+   	   <div class="cart-items">
+   	   	  <div class="image-box">
+   	   	  	<img src="images/cheese.png" />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h2 class="title">Cheese</h2>
+   	   	  	<h3 class="subtitle">Location: address 2</h3>
+   	   	  	<img src="images/available.png" height="30px"/>
+   	   	  </div>
+   	   	  <div class="notify">
+   	   	  	<div class="send">Send notification to the donater</div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+
+		<div class="cart-items">
+			<div class="image-box">
+				<img src="images/grapes.png"/>
+			</div>
+			<div class="about">
+				<h2 class="title">Grapes Juice</h2>
+				<h3 class="subtitle">Location: address 3</h3>
+				<img src="images/available.png" height="30px"/>
+			</div>
+			<div class="notify">
+				<div class="send">Send notification to the donater</div>
+				<div class="remove"><u>Remove</u></div>
+			</div>
+		</div>
+		<hr>
+		
+		<div class="checkout">
+			<div class="total">
+				<div>
+					<div class="Subtotal">Total:</div>
+				</div>
+				<div class="total-amount">3 items</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	let subMenu = document.getElementById("subMenu");
+
+	function toggleMenu(){
+		subMenu.classList.toggle("open-menu");
+	}
+</script>
+</html>

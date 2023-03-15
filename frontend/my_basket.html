@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="hero"> 
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#notification">Notifications</a></li>
+        </ul>
+        <img src="images/user.png" class="user-pic" onclick="toggleMenu()">
+
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <a href="profile.html"><img src="images/user.png"></a>
+                    <h3> Name Surname</h3>
+                </div> 
+                <hr>
+
+                <a href="edit_profile.html" class="sub-menu-link">
+                    <img src="images/profile.png">
+                    <p>Edit Profile</p>
+                    <span></span>
+                </a>
+                <a href="shopping_cart.html" class="sub-menu-link">
+                    <img src="images/received.png">
+                    <p>Shopping cart</p>
+                    <span></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="images/groceries.png">
+                    <p>My Grocery Basket</p>
+                    <span></span>
+                </a>
+                <a href="privacy.html" class="sub-menu-link">
+                    <img src="images/settings.png">
+                    <p>Settings & Privacy</p>
+                    <span></span>
+                </a>
+                <a href="source.html" class="sub-menu-link">
+                    <img src="images/logout.png">
+                    <p>Log out</p>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+</header>
+
+<h1 id="title">My products</h1>
+
+<button class="add-button" id="toggle-form" onclick="toggleForm()">Add Product</button>
+
+<form id="add-product-form">
+    <label for="name">Product Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="price">Location:</label>
+    <input type="text" id="price" name="price" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="5" required></textarea>
+    <input type="submit" value="Add Product">
+</form>
+
+
+<div class="product-container">
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/apple.png" alt="Apple">
+            <h1>Red Apples</h1>
+            <p class="expiry-date">Expiry date:</p>
+            <p>Some text about the apples. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+        </div>
+        <div class="product-card_buttons">
+            <p><button class="but_inline">Put to Market</button></p>
+            <p><button class="but_inline">Delete</button></p>
+        </div>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/sausages.png" alt="Apple">
+            <h1>Sausages</h1>
+            <p class="expiry-date">Expiry date:</p>
+            <p>Some text about the sausages. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+        </div>
+        <div class="product-card_buttons">
+            <p><button class="but_inline">Put to Market</button></p>
+            <p><button class="but_inline">Delete</button></p>
+        </div>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="expiry-date">Expiry date:</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+        </div>
+        <div class="product-card_buttons">
+            <p><button class="but_inline">Put to Market</button></p>
+            <p><button class="but_inline">Delete</button></p>
+        </div>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="expiry-date">Expiry date:</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p> 
+        </div>
+        <div class="product-card_buttons">
+            <p><button class="but_inline">Put to Market</button></p>
+            <p><button class="but_inline">Delete</button></p>
+        </div>
+    </div>
+</div>
+
+<div class="pagination">
+    <a href="#" class="prev">Previous</a>
+    <a href="#" class="page">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">4</a>
+    <a href="#" class="next">Next</a>
+</div>
+
+
+</body>
+<script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+
+    	// get the button and form elements
+		var toggleButton = document.getElementById("toggle-form");
+		var productForm = document.getElementById("add-product-form");
+		
+		// function to toggle the visibility of the form and change the button text
+		function toggleForm() {
+			productForm.classList.toggle("show");
+			if (toggleButton.textContent === "Add Product") {
+				toggleButton.textContent = "Close";
+			} else {
+				toggleButton.textContent = "Add Product";
+			}
+		}
+
+    //Pagination
+    var currentPage = 1;
+    var productsPerPage = 6;
+    var products = document.querySelectorAll('.product-card-wrapper');
+    var totalPages = Math.ceil(products.length / productsPerPage);
+
+    function showPage(page) {
+        var startIndex = (page - 1) * productsPerPage;
+        var endIndex = startIndex + productsPerPage;
+
+        for (var i = 0; i < products.length; i++) {
+            if (i >= startIndex && i < endIndex) {
+                products[i].style.display = 'block';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
+
+    function showPagination() {
+        var pagination = document.querySelector('.pagination');
+        var html = '';
+
+        for (var i = 1; i <= totalPages; i++) {
+            html += '<a href="#" class="page">' + i + '</a>';
+        }
+
+        pagination.innerHTML = html;
+    }
+
+    function setActivePage() {
+        var pages = document.querySelectorAll('.pagination .page');
+
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.remove('active');
+        }
+
+        pages[currentPage - 1].classList.add('active');
+    }
+
+    function init() {
+        showPage(currentPage);
+        showPagination();
+        setActivePage();
+    }
+
+    init();
+
+    document.querySelector('.pagination').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        if (e.target.classList.contains('page')) {
+          currentPage = parseInt(e.target.innerText);
+          showPage(currentPage);
+          setActivePage();
+        } else if (e.target.classList.contains('prev')) {
+            if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            setActivePage();
+           }
+        }
+    })
+</script>
+</html>

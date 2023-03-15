@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <div class="hero"> 
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#notification">Notifications</a></li>
+            </ul>
+            <img src="images/user.png" class="user-pic" onclick="toggleMenu()">
+    
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <a href="profile.html"><img src="images/user.png"></a>
+                        <h3> Name Surname</h3>
+                    </div> 
+                    <hr>
+    
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/profile.png">
+                        <p>Edit Profile</p>
+                        <span></span>
+                    </a>
+                    <a href="shopping_cart.html" class="sub-menu-link">
+                        <img src="images/received.png">
+                        <p>Shopping cart</p>
+                        <span></span>
+                    </a>
+                    <a href="my_basket.html" class="sub-menu-link">
+                        <img src="images/groceries.png">
+                        <p>My Grocery Basket</p>
+                        <span></span>
+                    </a>
+                    <a href="privacy.html" class="sub-menu-link">
+                        <img src="images/settings.png">
+                        <p>Settings & Privacy</p>
+                        <span></span>
+                    </a>
+                    <a href="source.html" class="sub-menu-link">
+                        <img src="images/logout.png">
+                        <p>Log out</p>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<body>
+
+	<form id="edit-profile-form">
+		<h2>Edit Profile</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Name Surname">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="name.surname@example.com">
+        <label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address" placeholder="Campus ring 1, Bremen">
+		<label for="bio">Bio:</label>
+		<textarea id="bio" name="bio" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra bibendum elit, vitae pulvinar lectus fermentum non. Sed non purus mauris. Vivamus in turpis vel mi rhoncus maximus. Sed ac consequat risus. Donec pharetra velit eu libero sodales venenatis."></textarea>
+		<input type="submit" value="Save Changes">
+	</form>
+
+    <div class="change-password-section"> 
+        <div class="change-button">
+            <button id="change-password-btn" class="password-button">Change Password</button>
+        </div>
+
+        <div id="change-password-form" class="hidden">
+            <form id="change-psw-form">
+              <h2>Change Password</h2>
+              <label for="current-password">Current Password</label>
+              <input type="password" id="current-password" name="current-password" required>
+              <label for="new-password">New Password</label>
+              <input type="password" id="new-password" name="new-password" required>
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+              <button type="submit">Save Changes</button>
+            </form>
+          </div>
+    </div>
+</body>
+<script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }     
+
+
+        const changePasswordBtn = document.getElementById("change-password-btn");
+        const changePasswordForm = document.getElementById("change-password-form");
+
+        changePasswordBtn.addEventListener("click", () => {
+            changePasswordForm.classList.toggle("hidden");
+            if (!changePasswordForm.classList.contains("hidden")) {
+                changePasswordBtn.style.marginRight = "10px";
+            } else {
+                changePasswordBtn.style.marginRight = "0";
+            }
+        });
+</script>
+</html>

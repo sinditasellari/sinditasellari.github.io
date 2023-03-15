@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta name="viewpoint" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <div class="hero"> 
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#notification">Notifications</a></li>
+            </ul>
+            <img src="images/user.png" class="user-pic" onclick="toggleMenu()">
+    
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <a href="profile.html"><img src="images/user.png"></a>
+                        <h3> Name Surname</h3>
+                    </div> 
+                    <hr>
+    
+                    <a href="edit_profile.html" class="sub-menu-link">
+                        <img src="images/profile.png">
+                        <p>Edit Profile</p>
+                        <span></span>
+                    </a>
+                    <a href="shopping_cart.html" class="sub-menu-link">
+                        <img src="images/received.png">
+                        <p>Shopping Cart</p>
+                        <span></span>
+                    </a>
+                    <a href="my_basket.html" class="sub-menu-link">
+                        <img src="images/groceries.png">
+                        <p>My Grocery Basket</p>
+                        <span></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/settings.png">
+                        <p>Settings & Privacy</p>
+                        <span></span>
+                    </a>
+                    <a href="source.html" class="sub-menu-link">
+                        <img src="images/logout.png">
+                        <p>Log out</p>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<body id="privacy_pg">
+	<div class="container">
+		<h1>Settings & Privacy</h1>
+		<div class="rules">
+			<h2>Rules and Regulations</h2>
+			<p class="text"> <i>Privacy and Data Protection Statement:</i>
+        <br>
+        <br>
+        We take your privacy seriously and are committed to protecting your personal information. 
+        We use the information you provide to us only for the purposes for which it was intended 
+        and will not share it with any third parties without your consent.
+        <br>
+        <br>
+        When you visit our website, we may collect certain information automatically, including 
+        your IP address, browser type, and operating system. This information is used to help us 
+        understand how visitors use our site and to improve our services.
+        <br>
+        <br>
+        We may also collect personal information from you if you choose to submit a form. 
+        This information may include your name, email address, and other contact information. 
+        We use this information to communicate with you and to provide you with the services you have requested.
+        <br>  
+        <br>  
+        We take appropriate measures to protect the security of your personal information and prevent 
+        unauthorized access, disclosure, or modification. We will retain your personal information only for
+         as long as necessary to fulfill the purposes for which it was collected.</p>
+			<p class="text-bold">We take appropriate measures to protect the security of your personal information and prevent 
+        unauthorized access, disclosure, or modification. We will retain your personal information only for
+         as long as necessary to fulfill the purposes for which it was collected.</p>
+		</div>
+		<div class="accept">
+			<label>
+				<input type="radio" name="accept" value="yes" id="accept-yes" checked> I accept the rules and regulations
+			</label>
+			<label>
+				<input type="radio" name="accept" value="no" id="accept-no"> I do not accept the rules and regulations
+			</label>
+			
+		</div>
+        <button class="submit-button" disabled>Submit</button>
+	</div>
+</body>
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+</script>
+</html>
