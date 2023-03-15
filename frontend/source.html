@@ -1,73 +1,262 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <meta charset="UTF-8" />
-        <title> Login and Registration </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
-        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
-        <meta name="author" content="Codrops" />
-        <link rel="stylesheet" type="text/css" href="main.css" />
-    </head>
-	<body>
-		<div class="login-wrap">
-			<div class="login-html">
-				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
-				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-				
-				<div class="login-form">
-					<form action="index.html">
-					<div class="sign-in-htm">
-						<div class="group">
-							<label for="user" class="label">Username</label>
-							<input id="user" type="text" class="input">
-						</div>
-						<div class="group">
-							<label for="pass" class="label">Password</label>
-							<input id="pass" type="password" class="input" data-type="password">
-						</div>
-						<div class="group">
-							<input id="check" type="checkbox" class="check" checked>
-							<label for="check"><span class="icon"></span> Keep me logged in</label>
-						</div>
-						<div class="group">
-							<input type="submit" class="button" value="Log In">
-						</div>
-						<div class="hr"></div>
-						<div class="foot-lnk">
-							<a href="#forgot">Forgot Password?</a>
-						</div>
-					</div>
-				    </form>
-					<form action="index.html">
-					<div class="sign-up-htm">
-						<div class="group">
-							<label for="user" class="label">Username</label>
-							<input id="user" type="text" class="input">
-						</div>
-						<div class="group">
-							<label for="pass" class="label">Email Address</label>
-							<input id="pass" type="text" class="input">
-						</div>
-						<div class="group">
-							<label for="pass" class="label">Password</label>
-							<input id="pass" type="password" class="input" data-type="password">
-						</div>
-						<div class="group">
-							<label for="pass" class="label">Repeat Password</label>
-							<input id="pass" type="password" class="input" data-type="password">
-						</div>
-						<div class="group">
-							<input type="submit" class="button" value="Sign Up">
-						</div>
-						<div class="hr"></div>
-						<div class="foot-lnk">
-							<label for="tab-1">Already Member?</a>
-						</div>
-					</div>
-				    </form>
-				</div>
-			</div>
-		</div>
-	</body>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+</style>
+<body>
+<header>
+<div class="hero"> 
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <div class="search">
+            <input type="text" name="search" maxlength="60" placeholder="Search..">
+        </div>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#notification">Notifications</a></li>
+        </ul>
+        <img src="images/user.png" class="user-pic" onclick="toggleMenu()">
+
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <a href="profile.html"><img src="images/user.png"></a>
+                    <h3> Name Surname</h3>
+                </div> 
+                <hr>
+
+                <a href="edit_profile.html" class="sub-menu-link">
+                    <img src="images/profile.png">
+                    <p>Edit Profile</p>
+                    <span></span>
+                </a>
+                <a href="shopping_cart.html" class="sub-menu-link">
+                    <img src="images/received.png">
+                    <p>Shopping cart</p>
+                    <span></span>
+                </a>
+                <a href="my_basket.html" class="sub-menu-link">
+                    <img src="images/groceries.png">
+                    <p>My Grocery Basket</p>
+                    <span></span>
+                </a>
+                <a href="privacy.html" class="sub-menu-link">
+                    <img src="images/settings.png">
+                    <p>Settings & Privacy</p>
+                    <span></span>
+                </a>
+                <a href="source.html" class="sub-menu-link">
+                    <img src="images/logout.png">
+                    <p>Log out</p>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+</header>
+
+<h1 id="title">Market</h1>
+
+<div class="product-container">
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/apple.png" alt="Apple">
+            <h1>Red Apples</h1>
+            <p class="location">Location</p>
+            <p>Some text about the apples. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/sausages.png" alt="Apple">
+            <h1>Sausages</h1>
+            <p class="location">Location</p>
+            <p>Some text about the sausages. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="location">Location</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="location">Location</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="location">Location</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="location">Location</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/cheese.png" alt="Apple">
+            <h1>Cheese</h1>
+            <p class="location">Location</p>
+            <p>Some text about the cheese. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+    <div class="product-card-wrapper">
+        <div class="product-card">
+            <img src="images/apple.png" alt="Apple">
+            <h1>Red Apples</h1>
+            <p class="location">Location</p>
+            <p>Some text about the apples. Description and other details. Bought them yesterday. Good condition but to be given asap.</p>
+            <h4 id="product-card-donator"> Donator: </h3>
+            <div class="donator-info">
+                <img src="images/user.png" id="product-card-donator-img">
+                <h4> Name Surname</h3>
+            </div> 
+        </div>
+        <button id="take_button">Take</button>
+    </div>
+</div>
+
+<div class="pagination">
+    <a href="#" class="prev">Previous</a>
+    <a href="#" class="page">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">4</a>
+    <a href="#" class="next">Next</a>
+  </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+    //Pagination
+    var currentPage = 1;
+    var productsPerPage = 6;
+    var products = document.querySelectorAll('.product-card-wrapper');
+    var totalPages = Math.ceil(products.length / productsPerPage);
+
+    function showPage(page) {
+        var startIndex = (page - 1) * productsPerPage;
+        var endIndex = startIndex + productsPerPage;
+
+        for (var i = 0; i < products.length; i++) {
+            if (i >= startIndex && i < endIndex) {
+                products[i].style.display = 'block';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
+
+    function showPagination() {
+        var pagination = document.querySelector('.pagination');
+        var html = '';
+
+        for (var i = 1; i <= totalPages; i++) {
+            html += '<a href="#" class="page">' + i + '</a>';
+        }
+
+        pagination.innerHTML = html;
+    }
+
+    function setActivePage() {
+        var pages = document.querySelectorAll('.pagination .page');
+
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.remove('active');
+        }
+
+        pages[currentPage - 1].classList.add('active');
+    }
+
+    function init() {
+        showPage(currentPage);
+        showPagination();
+        setActivePage();
+    }
+
+    init();
+
+    document.querySelector('.pagination').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        if (e.target.classList.contains('page')) {
+          currentPage = parseInt(e.target.innerText);
+          showPage(currentPage);
+          setActivePage();
+        } else if (e.target.classList.contains('prev')) {
+            if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            setActivePage();
+           }
+        }
+    })
+</script>
+</body>
 </html>
