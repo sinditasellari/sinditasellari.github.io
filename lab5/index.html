@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="control_section">
+        <div class="size_ctrl">
+            <h2>Box Size:</h2>
+                <label for="width">Width:</label>
+                <input type="text" id="width" name="width" > <span> px </span>
+                <label for="height">Height:</label>
+                <input type="text" id="height" name="height" > <span> px </span>
+                <input type="button" value="Set Width/Height" onclick="changeBoxSize()">
+        </div>
+        <div class="border_ctrl">
+            <h2>Box Border:</h2>
+            <div class="ctrl-container">
+                <label for="width">Border Width:</label>
+                <input type="text" id="border_width" name="border_width" > <span> px </span>
+                <input type="button" id="brd_width" value="Set Border Size" onclick="changeBorderSize()">
+            </div>
+            <div class="ctrl-container">
+                <label for="brd_color">Border Color:</label>
+                <input type="button" id="green" value="Green" onclick="greenBorder()">
+                <input type="button" id="red" value="Red" onclick="redBorder()">
+                <input type="button" id="orange" value="Orange" onclick="orangeBorder()">
+            </div>
+            <div class="ctrl-container">
+                <label for="brd_color">Border Style:</label>
+                <input type="button" value="Solid" onclick="solidBorder()">
+                <input type="button" value="Dotted" onclick="dottedBorder()">
+                <input type="button" value="Dashed" onclick="dashedBorder()">      
+            </div>
+        </div>
+        <div class="color_ctrl">
+            <h2>Box Background Color:</h2>
+            <div>
+                <label for="brd_color">Background Color:</label>
+                <input type="button" id="green" value="Green" onclick="greenColor()">
+                <input type="button" id="red" value="Red" onclick="redColor()">
+                <input type="button" id="orange" value="Orange" onclick="orangeColor()">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class = "shape">
+        <div class="square" id="square"></div>
+    </div>
+
+    <script src="myscript.js"></script>
+</body>
+</html>

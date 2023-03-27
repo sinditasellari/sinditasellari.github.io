@@ -1,0 +1,63 @@
+.control_section{
+    margin-bottom: 50px;
+}
+
+label{
+    margin-left:30px;
+}
+
+.size_ctrl{
+    border: 1px solid #555;
+    padding:0 0 20px 10px;
+
+}
+
+input[type=button]{
+    padding:10px;
+    margin-left:30px;
+    border: 1px outset #555;
+}
+
+#green{
+    background-color: green;
+
+}
+#red{
+    background-color: red;
+
+}
+#orange{
+    background-color: orange;
+}
+#brd_width{
+    padding:2px 6px;
+}
+
+
+.border_ctrl{
+    border: 1px solid #555;
+    padding:0 0 20px 10px;
+
+}
+
+.ctrl-container{
+    margin-bottom: 20px;
+}
+
+.color_ctrl{
+    border: 1px solid #555;
+    padding:0 0 20px 10px;
+
+}
+
+.shape{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: 1px groove grey;
+    }
