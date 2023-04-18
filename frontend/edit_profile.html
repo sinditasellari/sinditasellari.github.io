@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewpoint" content="width=device-width" initial-scale=1>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <header>
     <div class="hero"> 
@@ -71,41 +71,11 @@
 
     <div class="change-password-section"> 
         <div class="change-button">
-            <button id="change-password-btn" class="password-button">Change Password</button>
+            <button id="change-password-btn" class="password-button" onclick="showChangePasswordForm()">Change Password</button>
         </div>
-
-        <div id="change-password-form" class="hidden">
-            <form id="change-psw-form">
-              <h2>Change Password</h2>
-              <label for="current-password">Current Password</label>
-              <input type="password" id="current-password" name="current-password" required>
-              <label for="new-password">New Password</label>
-              <input type="password" id="new-password" name="new-password" required>
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" id="confirm-password" name="confirm-password" required>
-              <button type="submit">Save Changes</button>
-            </form>
-          </div>
     </div>
+    
+<script src="scripts/global.js"></script>
+<script src="scripts/edit-profile.js"></script>
 </body>
-<script>
-        let subMenu = document.getElementById("subMenu");
-
-        function toggleMenu(){
-            subMenu.classList.toggle("open-menu");
-        }     
-
-
-        const changePasswordBtn = document.getElementById("change-password-btn");
-        const changePasswordForm = document.getElementById("change-password-form");
-
-        changePasswordBtn.addEventListener("click", () => {
-            changePasswordForm.classList.toggle("hidden");
-            if (!changePasswordForm.classList.contains("hidden")) {
-                changePasswordBtn.style.marginRight = "10px";
-            } else {
-                changePasswordBtn.style.marginRight = "0";
-            }
-        });
-</script>
 </html>

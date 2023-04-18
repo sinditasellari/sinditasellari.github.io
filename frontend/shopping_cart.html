@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewpoint" content="width=device-width" initial-scale=1>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <header>
 	<div class="hero"> 
@@ -57,7 +57,17 @@
    <div class="cart-container">
    	   <div class="header">
 		<h3 class="heading">Shopping Cart</h3>
-   	   	<h5 class="action">Remove all</h5>
+		<div id="overlay">
+			<div id="popup">
+			  <h4>Do you really want to remove all items?</h2>
+			  <div class="buttons">
+				<button id="yesBtn">Yes</button>
+				<button id="noBtn">No</button>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <h5 class="action">Remove all</h5>
    	   </div>
 
    	   <div class="cart-items">
@@ -117,11 +127,6 @@
 	</div>
 </div>
 </body>
-<script>
-	let subMenu = document.getElementById("subMenu");
-
-	function toggleMenu(){
-		subMenu.classList.toggle("open-menu");
-	}
-</script>
+<script src="scripts/global.js"></script>
+<script src="scripts/shopping-cart.js"></script>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	  <meta name="viewpoint" content="width=device-width" initial-scale=1>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <header>
     <div class="hero"> 
@@ -91,15 +91,19 @@
 			</label>
 			
 		</div>
-        <button class="submit-button" disabled>Submit</button>
+        <div class="submit-btn">
+            <div class="bottom"></div>
+            <div class="cover cut"></div>
+            <div class="submit-container">
+              <div class="submit-text">Submit</div>
+            </div>
+            <div class="submit-container cut">
+              <div class="submit-text">Submit</div>
+            </div>
+
+          </div>
 	</div>
+<script src="scripts/global.js"></script>
+<script src="scripts/privacy.js"></script>
 </body>
-<script>
-    let subMenu = document.getElementById("subMenu");
-
-    function toggleMenu(){
-        subMenu.classList.toggle("open-menu");
-    }
-
-</script>
 </html>
